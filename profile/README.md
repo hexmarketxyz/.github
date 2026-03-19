@@ -1,6 +1,6 @@
 # HexMarket SDKs
 
-Official SDKs for the [HexMarket](https://hexmarket.io) prediction market protocol on Solana.
+Official SDKs for the [HexMarket](https://www.hexmarket.xyz) prediction market protocol on Solana.
 
 ## Overview
 
@@ -54,7 +54,7 @@ Low-level, high-performance client for latency-sensitive trading systems.
 use hexmarket_sdk::*;
 
 let client = HexClient::new(HexClientConfig {
-    api_url: "https://api.hexmarket.io".into(),
+    api_url: "https://api.www.hexmarket.xyz".into(),
 });
 let events = client.list_events(&Default::default()).await?;
 ```
@@ -74,7 +74,7 @@ Async client with Pydantic models — ideal for research, backtesting, and rapid
 ```python
 from hexmarket_sdk import HexClient
 
-async with HexClient("https://api.hexmarket.io") as client:
+async with HexClient("https://api.www.hexmarket.xyz") as client:
     events = await client.list_events(status="active")
 ```
 
@@ -92,13 +92,13 @@ First-party SDK used by the HexMarket web app — also available as a standalone
 ```typescript
 import { HexMarketClient } from '@hexmarket/sdk';
 
-const client = new HexMarketClient({ apiUrl: 'https://api.hexmarket.io' });
+const client = new HexMarketClient({ apiUrl: 'https://api.www.hexmarket.xyz' });
 const markets = await client.markets.list();
 ```
 
 ## Getting Started
 
-1. **Get API credentials** — Create an account on [hexmarket.io](https://hexmarket.io), connect your Solana wallet, and generate API keys from the settings page.
+1. **Get API credentials** — Create an account on [www.hexmarket.xyz](https://www.hexmarket.xyz), connect your Solana wallet, and generate API keys from the settings page.
 
 2. **Install an SDK** — Pick the language that fits your stack.
 
