@@ -45,13 +45,13 @@ High-performance async client for latency-sensitive trading systems.
 | | |
 |---|---|
 | **Repository** | [github.com/hexmarketxyz/hexmarket_rust_async_sdk](https://github.com/hexmarketxyz/hexmarket_rust_async_sdk) |
-| **Install** | `hexmarket-sdk = { git = "https://github.com/hexmarketxyz/hexmarket_rust_async_sdk.git" }` |
+| **Install** | `hexmarket-sdk-async = { git = "https://github.com/hexmarketxyz/hexmarket_rust_async_sdk.git" }` |
 | **Async Runtime** | Tokio |
 | **HTTP Client** | reqwest |
 | **Key Dependencies** | `ed25519-dalek`, `hmac`, `rust_decimal` |
 
 ```rust
-use hexmarket_sdk::*;
+use hexmarket_sdk_async::*;
 
 let client = HexClient::new(HexClientConfig {
     api_url: "https://api.hexmarket.xyz".into(),
