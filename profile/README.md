@@ -54,7 +54,7 @@ Low-level, high-performance client for latency-sensitive trading systems.
 use hexmarket_sdk::*;
 
 let client = HexClient::new(HexClientConfig {
-    api_url: "https://api.www.hexmarket.xyz".into(),
+    api_url: "https://api.hexmarket.xyz".into(),
 });
 let events = client.list_events(&Default::default()).await?;
 ```
@@ -74,7 +74,7 @@ Async client with Pydantic models — ideal for research, backtesting, and rapid
 ```python
 from hexmarket_sdk import HexClient
 
-async with HexClient("https://api.www.hexmarket.xyz") as client:
+async with HexClient("https://api.hexmarket.xyz") as client:
     events = await client.list_events(status="active")
 ```
 
@@ -92,7 +92,7 @@ First-party SDK used by the HexMarket web app — also available as a standalone
 ```typescript
 import { HexMarketClient } from '@hexmarket/sdk';
 
-const client = new HexMarketClient({ apiUrl: 'https://api.www.hexmarket.xyz' });
+const client = new HexMarketClient({ apiUrl: 'https://api.hexmarket.xyz' });
 const markets = await client.markets.list();
 ```
 
