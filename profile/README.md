@@ -80,13 +80,21 @@ async with HexClient("https://api.hexmarket.io") as client:
 
 ### TypeScript SDK
 
-First-party SDK used by the HexMarket web app. Available as `@hexmarket/sdk` within the monorepo.
+First-party SDK used by the HexMarket web app — also available as a standalone package.
 
 | | |
 |---|---|
-| **Location** | `packages/sdk/` in the [hexmarket monorepo](https://github.com/hexmarketxyz/hexmarket) |
+| **Repository** | [github.com/hexmarketxyz/hexmarket_typescript_sdk](https://github.com/hexmarketxyz/hexmarket_typescript_sdk) |
+| **Install** | `npm install git+https://github.com/hexmarketxyz/hexmarket_typescript_sdk.git` |
 | **Runtime** | Browser & Node.js 18+ |
-| **Key Features** | Web Crypto API for HMAC signing, full type definitions |
+| **Key Dependencies** | Web Crypto API for HMAC signing, full TypeScript type definitions |
+
+```typescript
+import { HexMarketClient } from '@hexmarket/sdk';
+
+const client = new HexMarketClient({ apiUrl: 'https://api.hexmarket.io' });
+const markets = await client.markets.list();
+```
 
 ## Getting Started
 
