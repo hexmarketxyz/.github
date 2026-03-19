@@ -38,14 +38,14 @@ Each order also includes an Ed25519 wallet signature, required for trustless on-
 
 ## SDKs
 
-### Rust SDK
+### Rust SDK (Async)
 
-Low-level, high-performance client for latency-sensitive trading systems.
+High-performance async client for latency-sensitive trading systems.
 
 | | |
 |---|---|
-| **Repository** | [github.com/hexmarketxyz/hexmarket_rust_sdk](https://github.com/hexmarketxyz/hexmarket_rust_sdk) |
-| **Install** | `hexmarket-sdk = { git = "https://github.com/hexmarketxyz/hexmarket_rust_sdk.git" }` |
+| **Repository** | [github.com/hexmarketxyz/hexmarket_rust_async_sdk](https://github.com/hexmarketxyz/hexmarket_rust_async_sdk) |
+| **Install** | `hexmarket-sdk = { git = "https://github.com/hexmarketxyz/hexmarket_rust_async_sdk.git" }` |
 | **Async Runtime** | Tokio |
 | **HTTP Client** | reqwest |
 | **Key Dependencies** | `ed25519-dalek`, `hmac`, `rust_decimal` |
@@ -57,6 +57,26 @@ let client = HexClient::new(HexClientConfig {
     api_url: "https://api.hexmarket.xyz".into(),
 });
 let events = client.list_events(&Default::default()).await?;
+```
+
+### Rust SDK (Sync)
+
+Synchronous client — no async runtime required.
+
+| | |
+|---|---|
+| **Repository** | [github.com/hexmarketxyz/hexmarket_rust_sync_sdk](https://github.com/hexmarketxyz/hexmarket_rust_sync_sdk) |
+| **Install** | `hexmarket-sdk-sync = { git = "https://github.com/hexmarketxyz/hexmarket_rust_sync_sdk.git" }` |
+| **HTTP Client** | ureq |
+| **Key Dependencies** | `ed25519-dalek`, `hmac`, `rust_decimal` |
+
+```rust
+use hexmarket_sdk_sync::*;
+
+let client = HexClient::new(HexClientConfig {
+    api_url: "https://api.hexmarket.xyz".into(),
+});
+let events = client.list_events(&Default::default())?;
 ```
 
 ### Python SDK
