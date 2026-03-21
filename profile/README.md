@@ -1,6 +1,6 @@
-# HexMarket SDKs
+# HexMarket
 
-Official SDKs for the [HexMarket](https://www.hexmarket.xyz) prediction market protocol on Solana.
+Official open-source repositories for the [HexMarket](https://www.hexmarket.xyz) prediction market protocol on Solana.
 
 ## Overview
 
@@ -115,6 +115,34 @@ import { HexMarketClient } from '@hexmarket/sdk';
 const client = new HexMarketClient({ apiUrl: 'https://api.hexmarket.xyz' });
 const markets = await client.markets.list();
 ```
+
+## Applications
+
+### Web App
+
+The HexMarket trading frontend — a Next.js static-export SPA with real-time orderbook, charting, and wallet-based trading.
+
+| | |
+|---|---|
+| **Repository** | [github.com/hexmarketxyz/web_app](https://github.com/hexmarketxyz/web_app) |
+| **Stack** | Next.js 15, React 19, TypeScript, Tailwind CSS, Zustand, TanStack Query |
+| **Real-time** | WebSocket for orderbook, trades, and user events |
+| **Wallet** | Privy + Solana Web3.js |
+| **I18n** | en, zh-CN, zh-TW, ja, ko, vi |
+| **Charting** | Lightweight Charts (TradingView) |
+
+### Docs Website
+
+Developer documentation site covering the API reference, SDK guides, trading concepts, and WebSocket channels.
+
+| | |
+|---|---|
+| **Repository** | [github.com/hexmarketxyz/docs_website](https://github.com/hexmarketxyz/docs_website) |
+| **Stack** | Next.js 15, Fumadocs, MDX |
+| **I18n** | English, Chinese |
+| **Base Path** | `/docs` |
+
+Live at [www.hexmarket.xyz/docs](https://www.hexmarket.xyz/docs)
 
 ## Getting Started
 
